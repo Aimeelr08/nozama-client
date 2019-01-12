@@ -3,8 +3,15 @@ const app = require('../app.js')
 const Handlebars = require('../../handlebars-v4.0.10.js')
 const Api = require('./api.js')
 
-const onAddProductSuccess = (id, title, price, img) => {
-  $('#cartContainer').append('<li>' + title + ' $ ' + price + '</li>')
+const onAddProductSuccess = (id,products, cost, title, data) => {
+
+  title = cost;
+let purchase = (cost + cost);
+
+  //change the call to price from calling image of calls
+
+  $('#cartContainer').append('<li><tr>Item: ' + products + '</tr><tr> Price:' + cost +'</tr></li>' ).data();
+
 }
 
 const onAddProductFailure = (error) => {
@@ -23,7 +30,7 @@ const onShowProductFailure = (error) => {
 
 const onShowCartSuccess = (data) => {
   $('#user-cart-table').remove()
-  // $('#empty-cart-btn').remove()
+   $('#empty-cart-btn').show()
   // for (let i = 0; i < app.user.cart.length; i++) {
   // $('#cartContainer').append(
   //   '<li>' + app.user.cart[i].title + ' $ ' + app.user.cart[i].price + '</li>'
@@ -49,9 +56,11 @@ const onShowCartFailure = (error) => {
 
 const onEmptyCartSuccess = (data) => {
   $('#cartContainer').empty()
-  for (let i = 0; i < app.user.cart.length; i++) {
+  for (let i = 0; i < app.user.cart.length; i++) {   
+
     $('#cartContainer').append(
-      '<li>' + app.user.cart[i].title + ' $ ' + app.user.cart[i].price + '</li>'
+      
+      '<li>' + app.user.cart[i].price + ' $ ' + app.user.cart[i].length+ '</li>'
     )
   }
 }

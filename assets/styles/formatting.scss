@@ -6,14 +6,15 @@
 // ==============================================
 
 body {
-  background-color: $primary;
   padding: 0 0 10%;
   text-align: center;
 }
 
+
 h1 {
   clear: both;
-  color: $secondary;
+  background-color:#f0fa68;
+  color: $black;
   font-family: $header-font;
   font-size: 55px;
   font-weight: bold;
@@ -22,7 +23,7 @@ h1 {
 }
 
 h2 {
-  color: $secondary;
+  color: $black;
   font-family: $tagline-font;
   font-size: 36px;
   font-style: italic;
@@ -60,7 +61,6 @@ ul {
 
 #header-container {
   background-color: $white;
-  border: 5px solid $primary;
   border-radius: 20px;
   margin: 208px auto 0;
   padding-bottom: 10px;
@@ -78,10 +78,13 @@ ul {
 }
 
 #landing-image {
-  border: 20px solid $tertiary;
+  
+  background-image:url("https://i.imgur.com/dDqADPe.jpg");
+  box-shadow:5px 2px 5px $secondary;
   border-radius: 10px;
   margin-bottom: 35px;
   width: 100%;
+  height:50%;
 }
 
 .container-fluid {
@@ -110,8 +113,8 @@ ul {
 }
 
 #cartList {
-  color: $white;
-  background-color: $primary;
+  color: $black;
+    background-color: $primary;
   word-spacing: 5px;
   border: 1px solid $black;
 }
@@ -132,7 +135,7 @@ ul {
 }
 
 .productTitle {
-  color: $primary;
+  color: $black;
   font-size: 20px;
   font-weight: bold;
 }
@@ -161,17 +164,17 @@ ul {
 }
 
 .add-to-cart-btn {
-  background-color: $secondary;
-  border: 3px solid $tertiary;
+  background-color: $white;
+  border: 3px solid $primary;
   border-radius: 10px;
-  color: $white;
+  color: $black;
   margin-bottom: 10px;
   width: 10em;
 }
 
 .add-to-cart-btn:hover {
-  background-color: $primary;
-  border: 3px solid $secondary;
+  background-color: $white;
+  border: 3px solid $black;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -185,7 +188,8 @@ ul {
 // ==============================================
 
 #shopBtn {
-  background-color: $primary;
+
+  color: $black;
   border: 0;
   margin-bottom: 10px;
 }
@@ -195,11 +199,12 @@ ul {
   margin: 85% 5% 5% 75%
 }
 
+
 .btn-success {
-  background-color: $primary;
+ color: $black;
+ background-color:#7268fa;
   border: 0;
   border-radius: 20px;
-  color: $white;
   font-weight: bold;
   margin-bottom: 10px;
   padding: 5px;
@@ -227,12 +232,17 @@ ul {
 
 #add-product {
   width: 80%;
-  background-image: url('https://i.imgur.com/EaVRYPat.png');
+  height: 100%;
+ color: $black;
+
+  
 }
 
 #delete-product {
+  color: $black;
+  background-color: red;
   width: 80%;
-  background-image: url('https://i.imgur.com/x9ymwxc.png?3');
+  height: 100%;
 
 }
 
@@ -260,11 +270,28 @@ ul {
 
 .name {
   font-weight: 700;
-  color: #B22222;
+  color: $black;
   margin: 0;
   padding: 0;
 }
 
+.sub-button {
+  color:$black;
+  background-color: green;
+  color: $black;
+  border: 0;
+  margin-top: 10px;
+
+}
+.btn-primary {
+  background-color: $secondary;
+  color:#fa2768;
+  border:none;
+}
+.btn-primary:hover{
+  background: #7268fa;
+
+}
 // ==============================================
 // ===========================   Footer End
 // ==============================================

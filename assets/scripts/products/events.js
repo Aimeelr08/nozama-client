@@ -20,7 +20,7 @@ const onShowCart = function (event) {
 
 const onAddProduct = function (event) {
   event.preventDefault()
-  const id = $(event.target).data('id')
+  const id = $(event.target).data('_id')
   const title = $(event.target).data('title')
   const price = $(event.target).data('price')
   const img = $(event.target).data('img')
